@@ -7,6 +7,7 @@ DOMAIN: C++ PROGRAMMING
 DURATION: AUGUST TO SEPTEMBER 2024
 
 Temperature Converter
+
 Overview
 This C++ program allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin. It features a simple text-based menu that makes it easy to select the desired conversion type and input the temperature.
 
@@ -17,40 +18,45 @@ Convert Fahrenheit to Celsius
 Convert Fahrenheit to Kelvin
 Convert Kelvin to Celsius
 Convert Kelvin to Fahrenheit
+
 User-friendly menu interface
 Input validation for menu choices
 Getting Started
+
+
 Prerequisites
 A C++ compiler (e.g., g++, clang++).
 Basic knowledge of command-line usage.
+
+
 Compilation
+
 Clone the repository:
-bash
-Copy code
+
 git clone https://github.com/yourusername/temperature-converter.git
+
 Navigate to the project directory:
-bash
-Copy code
+
 cd temperature-converter
 Compile the program:
-bash
-Copy code
+
 g++ -o temperature_converter temperature_converter.cpp
+
 Running the Program
 To run the compiled program, use the following command:
 
-bash
-Copy code
 ./temperature_converter
+
+
 Usage
+
 Upon launching the program, you will see a menu of temperature conversion options.
 Enter the number corresponding to the desired conversion type.
 Input the temperature when prompted.
 The program will display the converted temperature.
 You can continue converting temperatures until you choose to exit by entering 0.
 Example
-vbnet
-Copy code
+
 Temperature Conversion Menu
 1. Celsius to Fahrenheit
 2. Celsius to Kelvin
