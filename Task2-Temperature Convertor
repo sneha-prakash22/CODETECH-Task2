@@ -1,0 +1,97 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+double celsiusToFahrenheit(double celsius) {
+    return (celsius * 9.0 / 5.0) + 32.0;
+}
+
+double celsiusToKelvin(double celsius) {
+    return celsius + 273.15;
+}
+
+double fahrenheitToCelsius(double fahrenheit) {
+    return (fahrenheit - 32.0) * 5.0 / 9.0;
+}
+
+double fahrenheitToKelvin(double fahrenheit) {
+    return celsiusToKelvin(fahrenheitToCelsius(fahrenheit));
+}
+
+double kelvinToCelsius(double kelvin) {
+    return kelvin - 273.15;
+}
+
+double kelvinToFahrenheit(double kelvin) {
+    return celsiusToFahrenheit(kelvinToCelsius(kelvin));
+}
+
+void displayMenu() {
+    cout << "Temperature Conversion Menu" << endl;
+    cout << "1. Celsius to Fahrenheit" << endl;
+    cout << "2. Celsius to Kelvin" << endl;
+    cout << "3. Fahrenheit to Celsius" << endl;
+    cout << "4. Fahrenheit to Kelvin" << endl;
+    cout << "5. Kelvin to Celsius" << endl;
+    cout << "6. Kelvin to Fahrenheit" << endl;
+    cout << "0. Exit" << endl;
+}
+
+int main() {
+    double inputTemperature;
+    int choice;
+
+    do {
+        displayMenu();
+        cout << "Choose an option (0 to exit): ";
+        cin >> choice;
+
+        if (choice == 0) {
+            break;
+        }
+
+        cout << "Enter the temperature: ";
+        cin >> inputTemperature;
+
+        switch (choice) {
+            case 1:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " °C = " 
+                     << celsiusToFahrenheit(inputTemperature) << " °F" << endl;
+                break;
+            case 2:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " °C = " 
+                     << celsiusToKelvin(inputTemperature) << " K" << endl;
+                break;
+            case 3:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " °F = " 
+                     << fahrenheitToCelsius(inputTemperature) << " °C" << endl;
+                break;
+            case 4:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " °F = " 
+                     << fahrenheitToKelvin(inputTemperature) << " K" << endl;
+                break;
+            case 5:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " K = " 
+                     << kelvinToCelsius(inputTemperature) << " °C" << endl;
+                break;
+            case 6:
+                cout << fixed << setprecision(2)
+                     << inputTemperature << " K = " 
+                     << kelvinToFahrenheit(inputTemperature) << " °F" << endl;
+                break;
+            default:
+                cout << "Invalid option! Please try again." << endl;
+                break;
+        }
+        cout << endl; // Add a new line for better readability
+    } while (choice != 0);
+
+    cout << "Thank you for using the temperature converter!" << endl;
+    return 0;
+}
