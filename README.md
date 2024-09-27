@@ -1,4 +1,11 @@
+
 # CODETECH-Task2
+NAME: P SNEHA
+COMPANY : CODETECH IT SOLUTIONS
+ID: CT08DS7690
+DOMAIN: C++ PROGRAMMING
+DURATION: AUGUST TO SEPTEMBER 2024
+
 Temperature Converter
 Overview
 This C++ program allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin. It features a simple text-based menu that makes it easy to select the desired conversion type and input the temperature.
